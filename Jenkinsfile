@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Clone the repository
-                git 'https://github.com/Aditiniphade/spaceece.git'
+                git 'https://github.com/Aditiniphade/ansibleb2.git'
             }
         }
 
