@@ -1,25 +1,40 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Checkout') {
-            steps {
-                // Clone the repository
-                git 'https://github.com/Aditiniphade/ansibleb2.git'
-            }
-        }
-
-        stage('Build') {
-            steps {
-                // Run a Maven build
-                sh 'mvn clean install'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                // Run tests
-                sh 'mvn test'
-            }
-        }
+pipeline
+{ 
+   agent any
+    
+   stages
+   {
+      stage('First')
+       {
+         steps 
+         {
+            echo 
+            "this is 1st stage"
+         }
+      }
+      stage('Second') 
+      {
+         steps 
+         {
+            echo 
+            "This is second stage"
+         }
+      }
+      stage('Third')
+      {
+         steps 
+         {
+            echo 
+            "This is third stage"
+         }
+      }
+      stage('Fourth') 
+      {
+         steps 
+         {
+            echo 
+            "This is 4th stage"
+         }
+      }
     }
+   }
